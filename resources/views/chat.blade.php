@@ -10,10 +10,8 @@
 <body >
     <div id="app">
         <h1 class="mt-5">Chat application</h1>
-        <example-component></example-component>
-        
-       <chat-log></chat-log>
-       <chat-composer></chat-composer>
+       <chat-log :messages="messages"></chat-log>
+       <chat-composer v-on:messagesent="addMessage"></chat-composer>
     </div>
     <script src="js/app.js" charset="utf-8"></script>
 </body>
